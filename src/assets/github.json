@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "title": "iPhone Clone",
+    "description": "A pixel-perfect iPhone UI clone built using pure HTML and CSS, focusing on layout accuracy and responsive design.",
+    "tags": ["HTML", "CSS", "Responsive Design"],
+    "repoLink": "https://github.com/DebugZero0/MERN-Cohort-2.0/tree/main/01_HTML_CSS/iPhone%20clone",
+    "demoLink": "https://cohort-2-0-self.vercel.app/"
+  },
+  {
+    "id": 2,
+    "title": "Movie Site",
+    "description": "A modern movie listing website showcasing popular films with clean UI and structured layouts.",
+    "tags": ["HTML", "CSS", "UI Design"],
+    "repoLink": "https://github.com/DebugZero0/MERN-Cohort-2.0/tree/main/01_HTML_CSS/Movie%20site",
+    "demoLink": "https://cohort-2-0-vlh8.vercel.app/"
+  },
+  {
+    "id": 3,
+    "title": "Infinite Crauser",
+    "description": "An infinite scrolling carousel built using Tailwind CSS with smooth animations.",
+    "tags": ["Tailwind CSS", "Animation", "UI Components"],
+    "repoLink": "https://github.com/DebugZero0/MERN-Cohort-2.0/tree/main/02_Tailwind/Infinite%20crauser",
+    "demoLink": "https://crauser.vercel.app/"
+  },
+  {
+    "id": 4,
+    "title": "EyeTracker.js",
+    "description": "A fun JavaScript project where elements track cursor movement, demonstrating DOM manipulation.",
+    "tags": ["JavaScript", "DOM", "Event Handling"],
+    "repoLink": "https://github.com/DebugZero0/MERN-Cohort-2.0/tree/main/03_JavaScript/Eye",
+    "demoLink": "https://mern-cohort-2-0.vercel.app/"
+  },
+  {
+    "id": 5,
+    "title": "Apex Shoes",
+    "description": "An interactive sneaker store frontend built with vanilla JavaScript and smooth UI interactions.",
+    "tags": ["JavaScript", "E-commerce UI", "Frontend"],
+    "repoLink": "https://github.com/DebugZero0/MERN-Cohort-2.0/tree/main/03_JavaScript/Sneakers",
+    "demoLink": "https://snazzy-buttercream-57e1f7.netlify.app/"
+  },
+  {
+    "id": 6,
+    "title": "Dayflow",
+    "description": "A productivity web app designed to manage tasks efficiently with advanced JavaScript concepts.",
+    "tags": ["Advanced JavaScript", "Productivity", "Web App"],
+    "repoLink": "https://github.com/DebugZero0/MERN-Cohort-2.0/tree/main/04_Advance_JS/Productivity%20Website",
+    "demoLink": "https://mern-cohort-2-0-qx5d.vercel.app/"
+  },
+  {
+    "id": 7,
+    "title": "Weatherwise",
+    "description": "A real-time weather dashboard using APIs to display accurate weather information.",
+    "tags": ["Advanced JavaScript", "API", "Weather App"],
+    "repoLink": "https://github.com/DebugZero0/MERN-Cohort-2.0/tree/main/04_Advance_JS/Weather%20DashBoard",
+    "demoLink": "https://mern-cohort-2-0-vi8p.vercel.app/"
+  },
+  {
+    "id": 8,
+    "title": "My Market",
+    "description": "A React-based marketplace application featuring product listings and dynamic UI updates.",
+    "tags": ["React", "State Management", "Tailwind CSS"],
+    "repoLink": "https://github.com/DebugZero0/MERN-Cohort-2.0/tree/main/05_React_JS/Project-Market",
+    "demoLink": "https://frolicking-genie-aff01c.netlify.app/"
+  },
+  {
+    "id": 9,
+    "title": "Pokemon",
+    "description": "A Pokémon explorer app built with React, fetching data from external APIs.",
+    "tags": ["React", "CSS", "Hooks","JavaScript"],
+    "repoLink": "https://github.com/DebugZero0/MERN-Cohort-2.0/tree/main/05_React_JS/Project-Pokemon",
+    "demoLink": "https://snazzy-gumption-414b9a.netlify.app/"
+  }
+]

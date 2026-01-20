@@ -1,0 +1,107 @@
+
+# Developer Profile
+
+> Frontend Developer focused on TypeScript, JavaScript, and modern web technologies.  
+> Passionate about clean code, scalable architecture, and real-world problem solving.
+
+---
+
+## About Me
+
+I am a dedicated frontend developer with hands-on experience building **production-ready web applications** using TypeScript and JavaScript. My approach to development emphasizes **clarity, maintainability, and user experience**.
+
+I learn best by building real projects and continuously refining my understanding of modern frontend systems.
+
+---
+
+## Role & Responsibilities
+
+- Frontend Developer specializing in **TypeScript** and **React**
+- Develop reusable and maintainable UI components
+- Translate UI/UX designs into functional interfaces
+- Handle asynchronous operations and API integrations
+- Optimize performance and improve code readability
+- Debug, refactor, and enhance existing codebases
+
+---
+
+## Technical Skills
+
+### Languages
+- TypeScript
+- JavaScript (ES6+)
+- HTML5
+- CSS3
+
+### Frameworks & Libraries
+- React.js
+- Tailwind CSS
+- Bootstrap
+
+### Core Concepts
+- Component-based architecture
+- State and props management
+- DOM manipulation
+- Event handling
+- REST API integration
+- Responsive design principles
+
+---
+
+## Tools & Platforms
+
+| Category | Tools |
+|--------|-------|
+| Version Control | Git, GitHub |
+| Development | VS Code, npm |
+| Frameworks | React.js |
+| Styling | Tailwind CSS, Bootstrap, CSS |
+| Deployment | Vercel, Netlify |
+| Languages | TypeScript, JavaScript |
+
+
+## Experience
+
+I have built and deployed multiple frontend projects ranging from **static UI clones** to **dynamic React applications**.
+
+Notable experience includes:
+- UI clones focusing on layout accuracy and responsiveness
+- JavaScript-driven interactive websites
+- API-based dashboards (weather, productivity tools)
+- React applications with dynamic routing and state handling
+
+---
+
+## Achievements
+
+> Consistency, hands-on learning, and visible progress define my journey.
+
+- Completed and deployed **multiple live projects**
+- Maintained a well-structured project repository
+- Progressed from basic HTML/CSS to advanced React concepts
+- Strong practical understanding of frontend fundamentals
+
+---
+
+## Learning & Growth
+
+- Improving TypeScript proficiency for better type safety
+- Exploring advanced React patterns and performance tuning
+- Learning clean architecture and scalable project structures
+- Actively building projects to reinforce concepts
+
+---
+
+## Developer Mindset
+
+- Readability over cleverness
+- Structure before styling
+- Learning by building real applications
+- Attention to detail in UI and UX
+- Continuous improvement through feedback
+
+---
+
+## Summary
+
+A motivated frontend developer with practical experience in **TypeScript, JavaScript, and React**, focused on building clean, maintainable applications and steadily growing toward advanced frontend and full-stack development.

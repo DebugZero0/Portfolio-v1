@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ 
+html,
+body,
+#root {
+    height: 100%;
+    width: 100%;
+}
+main {
+    height: 100%;
+    width: 100%;
+    background-image: url('/bg2.jpg');
+    background-size: cover;
+    background-position: center;
+    // Ensure content(window) does not overflow
+    position: relative;
+    overflow: hidden;
+}

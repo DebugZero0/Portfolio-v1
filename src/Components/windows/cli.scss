@@ -1,0 +1,39 @@
+@import "@fontsource/jetbrains-mono/400.css";
+@import "@fontsource/jetbrains-mono/500.css";
+
+.cli-window {
+    height: 100%;
+    overflow: auto;
+
+    div[name="react-console-emulator"] {
+        height: 100%;
+
+        font-family: 'JetBrains Mono', 'SF Mono', Menlo, Monaco, Consolas, monospace;
+        font-size: 14px;
+        line-height: 1.5;
+        background-color: #0c0c0c;
+        color: #e5e5e5;
+
+        input {
+            font-family: inherit;
+        }
+
+        &::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background: #3434349f;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: #7373739f;
+            border-radius: 10px;
+
+            &:hover {
+                background: #737373d6;
+                cursor: move;
+            }
+        }
+    }
+}
