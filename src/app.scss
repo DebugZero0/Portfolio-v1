@@ -10,13 +10,20 @@ body,
     height: 100%;
     width: 100%;
 }
+
 main {
     height: 100%;
     width: 100%;
     background-image: url('/bg2.jpg');
     background-size: cover;
     background-position: center;
-    // Ensure content(window) does not overflow
     position: relative;
     overflow: hidden;
+    transition: background-image 0.3s ease;
+}
+
+/* Light Mode */
+[data-theme="light"] main {
+    background-image: url('/bg1.jpg');
+    background-color: #f5f5f5;
 }

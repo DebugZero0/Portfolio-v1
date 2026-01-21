@@ -7,6 +7,7 @@ import Note from './Components/windows/Note.jsx'
 import Resume from './Components/windows/Resume.jsx'
 import Spotify from './Components/windows/Spotify.jsx'
 import Cli from './Components/windows/Cli.jsx'
+import { ThemeProvider } from './context/ThemeContext.jsx'
 
 
 function App() {
@@ -43,11 +44,10 @@ function App() {
   }
 
   return (
-    <>
-      <main>
+    <ThemeProvider>
+       <main>
         <Nav />
-        <Doc windowState={windowState} setwindowState={setwindowState} />
-        {windowState.github?.open && (
+      {windowState.github?.open && (
           <Github
             windowName="github"
             windowState={windowState}
@@ -107,8 +107,9 @@ function App() {
             onFocus={bringToFront}
           />
         )} 
-      </main>
-    </>
+        <Doc windowState={windowState} setwindowState={setwindowState} />
+        </main>
+    </ThemeProvider>
   )
 }
 

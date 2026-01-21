@@ -8,9 +8,11 @@
     border-radius: 0.75rem;
     padding-inline: 1rem;
     padding-block: 0.75rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    background: rgba(144, 144, 144, 0.2);
+    box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, rgba(144, 144, 144, 0.3), rgba(255, 255, 255, 0.1));
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
 
     .icon{
         display: flex;
@@ -21,8 +23,8 @@
         border-radius: 0.5rem;
         transition: transform 0.5s cubic-bezier(0.19, 1, 0.22, 1);
         padding: 0.25rem;
-        background-color: rgba(255, 255, 255, 0.149);
         position: relative;
+        box-shadow: inset 0 0 10px 0 rgba(255, 255, 255, 0.3);
         
         img{
             width: 2rem;
@@ -53,6 +55,37 @@
             background: #FFBD44;
             border-radius: 50%;
             box-shadow: 0 0 4px rgba(255, 189, 68, 0.6);
+        }
+    }
+}
+
+/* Light Mode */
+[data-theme="light"] .dock {
+
+    background: linear-gradient(
+        135deg,
+        rgba(255,255,255,0.1),
+        rgba(255,255,255,0) 
+        
+    );
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    box-shadow:inset 0 8px 32px 0 rgba(255, 255, 255, 0.37);
+
+    .icon {
+        background: linear-gradient(
+        135deg,
+        rgba(255,255,255,0.1),
+        rgba(255,255,255,0) 
+        
+    );
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
+
+        color: white;
+        img {
+            filter: brightness(0.9);
         }
     }
 }
