@@ -46,7 +46,7 @@ function App() {
   return (
     <ThemeProvider>
        <main>
-        <Nav />
+        <Nav windowState={windowState} setwindowState={setwindowState} />
       {windowState.github?.open && (
           <Github
             windowName="github"

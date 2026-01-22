@@ -36,15 +36,11 @@ const menuConfig = [
     {
         key: 'terminal',
         label: 'Terminal',
-        items: [
-            { label: 'New Terminal', shortcut: 'Ctrl+`' },
-            { label: 'Run Task', shortcut: 'Ctrl+Shift+B' },
-            { label: 'Kill Terminal' }
-        ]
+        items: []
     }
 ]
 
-const Nav = () => {
+const Nav = ({ windowState, setwindowState }) => {
     const [openMenu, setOpenMenu] = useState(null)
     const navRef = useRef(null)
     const { theme, toggleTheme } = useTheme()
@@ -72,7 +68,21 @@ const Nav = () => {
     }, [])
 
     const handleToggle = (key) => {
-        setOpenMenu((current) => (current === key ? null : key))
+        if (key === 'terminal') {
+            // Toggle terminal window
+            setwindowState((prev) => {
+                const current = prev.cli || { open: false, minimized: false }
+                if (!current.open) {
+                    return { ...prev, cli: { open: true, minimized: false } }
+                }
+                if (current.minimized) {
+                    return { ...prev, cli: { ...current, minimized: false } }
+                }
+                return { ...prev, cli: { ...current, minimized: true } }
+            })
+        } else {
+            setOpenMenu((current) => (current === key ? null : key))
+        }
     }
 
     const handleMenuItemClick = (label) => {
@@ -102,7 +112,7 @@ const Nav = () => {
                         >
                             <p>{item.label}</p>
                         </button>
-                        {openMenu === item.key && (
+                        {openMenu === item.key && item.items.length > 0 && (
                             <div className="nav-menu" role="menu">
                                 {item.items.map((menuItem) => (
                                     <button
