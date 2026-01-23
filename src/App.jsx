@@ -7,6 +7,8 @@ import Note from './Components/windows/Note.jsx'
 import Resume from './Components/windows/Resume.jsx'
 import Spotify from './Components/windows/Spotify.jsx'
 import Cli from './Components/windows/Cli.jsx'
+import About from './Components/windows/About.jsx'
+import Contact from './Components/windows/Contact.jsx'
 import { ThemeProvider } from './context/ThemeContext.jsx'
 
 
@@ -19,6 +21,8 @@ function App() {
       resume: { open: false, minimized: false },
       spotify: { open: false, minimized: false },
       cli: { open: false, minimized: false },
+      about: { open: false, minimized: false },
+      contact: { open: false, minimized: false },
     }
   )
 
@@ -43,10 +47,41 @@ function App() {
     }))
   }
 
+  const openWindowCentered = (name, size = { width: 520, height: 360 }) => {
+    if (typeof window !== 'undefined') {
+      const x = Math.max(0, (window.innerWidth - size.width) / 2)
+      const y = Math.max(24, (window.innerHeight - size.height) / 2)
+      setWindowLayouts((prev) => (
+        prev[name]
+          ? prev
+          : {
+              ...prev,
+              [name]: {
+                x,
+                y,
+                width: size.width,
+                height: size.height,
+              },
+            }
+      ))
+    }
+
+    setwindowState((prev) => ({
+      ...prev,
+      [name]: { open: true, minimized: false },
+    }))
+
+    bringToFront(name)
+  }
+
   return (
     <ThemeProvider>
        <main>
-        <Nav windowState={windowState} setwindowState={setwindowState} />
+        <Nav
+          windowState={windowState}
+          setwindowState={setwindowState}
+          openWindowCentered={openWindowCentered}
+        />
       {windowState.github?.open && (
           <Github
             windowName="github"
@@ -92,6 +127,30 @@ function App() {
             layout={windowLayouts.spotify}
             onLayoutChange={handleLayoutChange}
             zIndex={zIndexMap.spotify ?? 101}
+            onFocus={bringToFront}
+          />
+        )}
+        {windowState.about?.open && (
+          <About
+            windowName="about"
+            windowState={windowState}
+            setwindowState={setwindowState}
+            minimized={windowState.about?.minimized}
+            layout={windowLayouts.about}
+            onLayoutChange={handleLayoutChange}
+            zIndex={zIndexMap.about ?? 101}
+            onFocus={bringToFront}
+          />
+        )}
+        {windowState.contact?.open && (
+          <Contact
+            windowName="contact"
+            windowState={windowState}
+            setwindowState={setwindowState}
+            minimized={windowState.contact?.minimized}
+            layout={windowLayouts.contact}
+            onLayoutChange={handleLayoutChange}
+            zIndex={zIndexMap.contact ?? 101}
             onFocus={bringToFront}
           />
         )}

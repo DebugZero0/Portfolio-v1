@@ -9,7 +9,6 @@ const menuConfig = [
         label: 'Home',
         items: [
             { label: 'About' },
-            { label: 'Projects' },
             { label: 'Contact' },
             { label: 'Quit' }
         ]
@@ -40,7 +39,7 @@ const menuConfig = [
     }
 ]
 
-const Nav = ({ windowState, setwindowState }) => {
+const Nav = ({ windowState, setwindowState, openWindowCentered }) => {
     const [openMenu, setOpenMenu] = useState(null)
     const navRef = useRef(null)
     const { theme, toggleTheme } = useTheme()
@@ -89,9 +88,35 @@ const Nav = ({ windowState, setwindowState }) => {
         if (label === 'Dark Mode') {
             toggleTheme('dark')
             setOpenMenu(null)
-        } else if (label === 'Light Mode') {
+            return
+        }
+
+        if (label === 'Light Mode') {
             toggleTheme('light')
             setOpenMenu(null)
+            return
+        }
+
+        if (label === 'About') {
+            openWindowCentered?.('about', { width: 520, height: 360 })
+            setOpenMenu(null)
+            return
+        }
+
+        if (label === 'Contact') {
+            openWindowCentered?.('contact', { width: 480, height: 320 })
+            setOpenMenu(null)
+            return
+        }
+
+        if (label === 'Quit') {
+            setOpenMenu(null)
+            if (typeof window !== 'undefined') {
+                window.close()
+                setTimeout(() => {
+                    window.location.href = 'about:blank'
+                }, 150)
+            }
         }
     }
 
