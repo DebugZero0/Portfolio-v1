@@ -1,0 +1,75 @@
+.created-files {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 50;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.created-file {
+  position: absolute;
+  width: 78px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #f5f5f5;
+  text-align: center;
+  font-size: 13px;
+  word-break: break-word;
+  cursor: grab;
+  user-select: none;
+  pointer-events: auto;
+}
+
+.created-file img {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+.file-context-menu {
+  position: fixed;
+  background: #2a2a2a;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  padding: 4px;
+  z-index: 200;
+  pointer-events: auto;
+}
+
+.file-context-menu button {
+  width: 100%;
+  padding: 8px 16px;
+  background: transparent;
+  border: none;
+  color: #f85149;
+  font-size: 14px;
+  text-align: left;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 120ms ease;
+}
+
+.file-context-menu button:hover {
+  background: rgba(248, 81, 73, 0.15);
+}
+
+[data-theme="light"] .created-file {
+  color: #f5f5f5;
+}
+
+[data-theme="light"] .file-context-menu {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+[data-theme="light"] .file-context-menu button {
+  color: #c82333;
+}
+
+[data-theme="light"] .file-context-menu button:hover {
+  background: rgba(200, 35, 51, 0.1);
+}

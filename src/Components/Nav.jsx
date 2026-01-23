@@ -17,11 +17,9 @@ const menuConfig = [
         key: 'file',
         label: 'File',
         items: [
-            { label: 'New Window', shortcut: 'Ctrl+N' },
-            { label: 'New File', shortcut: 'Ctrl+Shift+N' },
-            { label: 'Open…', shortcut: 'Ctrl+O' },
-            { label: 'Save', shortcut: 'Ctrl+S' },
-            { label: 'Close All', shortcut: 'Ctrl+W' }
+            { label: 'New File'},
+            { label: 'Open…'},
+            { label: 'Close All'}
         ]
     },
     {
@@ -39,10 +37,10 @@ const menuConfig = [
     }
 ]
 
-const Nav = ({ windowState, setwindowState, openWindowCentered }) => {
+const Nav = ({ windowState, setwindowState, openWindowCentered, onSearchAndOpenFile, onCloseAllFiles }) => {
     const [openMenu, setOpenMenu] = useState(null)
     const navRef = useRef(null)
-    const { theme, toggleTheme } = useTheme()
+    const { toggleTheme } = useTheme()
 
     useEffect(() => {
         const handleClickOutside = (event) => {
@@ -93,6 +91,24 @@ const Nav = ({ windowState, setwindowState, openWindowCentered }) => {
 
         if (label === 'Light Mode') {
             toggleTheme('light')
+            setOpenMenu(null)
+            return
+        }
+
+        if (label === 'New File') {
+            openWindowCentered?.('newFile', { width: 420, height: 220 })
+            setOpenMenu(null)
+            return
+        }
+
+        if (label === 'Open…') {
+            openWindowCentered?.('openFolder', { width: 420, height: 240 })
+            setOpenMenu(null)
+            return
+        }
+
+        if (label === 'Close All') {
+            onCloseAllFiles?.()
             setOpenMenu(null)
             return
         }
